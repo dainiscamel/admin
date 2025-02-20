@@ -1,31 +1,21 @@
-import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import Header from "@/components/Header";
+import Content from "./Content";
 
 const Layout = () => {
   return (
     <Container>
-      <Wrapper>
-        <Outlet />
-      </Wrapper>
+      <Header />
+      <Content />
     </Container>
   );
 };
-
-const Wrapper = styled.div`
-  width: 800px;
-  height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid black;
-`;
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 `;
 export default Layout;
